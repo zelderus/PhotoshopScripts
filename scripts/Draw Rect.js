@@ -15,7 +15,7 @@ var OPTS = {
     PosX: 0,
     PosY: 0,
     InvertY: true,	// инверсия по оси Y (если инверсия, то считаем снизу)
-	InCenter: true, // центирировать квадрат в координаты
+    InCenter: true, // центрировать квадрат в координаты
     ColorR: 1.000000,
     ColorG: 1.000000,
     ColorB: 1.000000
@@ -26,12 +26,12 @@ var OPTS = {
 // создаем слой
 var createLayer = function() {
     var doc = app.activeDocument;
-	var activeLayer = doc.activeLayer;
+    var activeLayer = doc.activeLayer;
     // набор (группа), куда вставлять новый слой будем
     var layerSets = doc.artLayers;
     if (activeLayer != null && activeLayer.parent != null && activeLayer.parent.typename == "LayerSets") layerSets = activeLayer.parent;
     // создаем
-	var newLayerRef = layerSets.add();
+    var newLayerRef = layerSets.add();
     // называем и ставим в позицию
     newLayerRef.name = OPTS.LayerWantName;
     if (activeLayer != null) newLayerRef.move(activeLayer, ElementPlacement.PLACEBEFORE);
@@ -87,10 +87,10 @@ var drawShape = function() {
 var layerSearchDo = function(dlg) {
     var doc = app.activeDocument;
     // создаем слой
-	var layer = createLayer();
+    var layer = createLayer();
     if (layer == null) { return; }
     // рассчитываем координаты
-	var offsetXY = OPTS.InCenter ? OPTS.OffsetXY - OPTS.RectSize/2 : OPTS.OffsetXY;
+    var offsetXY = OPTS.InCenter ? OPTS.OffsetXY - OPTS.RectSize/2 : OPTS.OffsetXY;
     var tl_x = offsetXY + OPTS.PosX;
     var tl_y = OPTS.InvertY ? (doc.height.value - offsetXY - OPTS.RectSize - OPTS.PosY) : (offsetXY + OPTS.PosY);
     var tr_x = tl_x + OPTS.RectSize;

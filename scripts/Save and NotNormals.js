@@ -23,9 +23,9 @@ var OPTS = {
     FilePath: "c:/pngout", // "/c/pngout"
     FileName: "unnamed",
     FileSuffix: "_normal",
-	AutoSaveAfterEnd: true,
-	FileExtension: "png",
-	FileSaveOptions: new PNGSaveOptions()
+    AutoSaveAfterEnd: true,
+    FileExtension: "png",
+    FileSaveOptions: new PNGSaveOptions()
 }
 
 /*
@@ -81,9 +81,9 @@ var layerSearchDo = function(dlg) {
             var isSuccess = layerWorkDo(layerSet);
             // info
             if (isSuccess) {
-				if (OPTS.AutoSaveAfterEnd === true) { try{docRef.save();} catch(ex){} }
-				alert("Выполнено успешно 😊");
-			}
+                if (OPTS.AutoSaveAfterEnd === true) { try{docRef.save();} catch(ex){} }
+                alert("Выполнено успешно 😊");
+            }
             dlg.close();
             return;
         }

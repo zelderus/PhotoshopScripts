@@ -1,5 +1,5 @@
 # Скрипты для Photoshop
-Набор узконаправленных скриптов для Photoshop CS6+ на javascript.
+Набор узконаправленных скриптов для Photoshop CS6+ на JavaScript.
 
 ### Содержание
 - [Draw Rect][link_sc_drawrect] - Рисование квадрата в новом слое на позиции
